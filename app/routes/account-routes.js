@@ -17,7 +17,7 @@ module.exports = (app) => {
   router.post("/token", accounts.verifyToken);
   router.post("/register", accounts.create);
   router.post("/upload", upload.single("profile"), accounts.uploadImage);
-  router.post("/delimg", accounts.deleteImage);
+  router.delete("/delimg", accounts.deleteImage);
   router.put("/edit", accounts.update);
   router.delete("/remove", accounts.delete);
   router.get("/image/:profile", accounts.viewImage);
